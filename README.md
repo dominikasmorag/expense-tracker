@@ -1,9 +1,7 @@
 <h2>Expense Tracker</h2>
 
 Simple console app to track expenses, a user can create categories and add expenses to the database.
-Used technologies:
--MySQL 
--Hibernate
+Used technologies: **MySQL**, **Hibernate**
 
 Step by step how does it work:
 
