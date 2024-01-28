@@ -90,7 +90,7 @@ public class ExpenseCategoryDAO extends DAO {
         }
     }
 
-    protected List getCategoryObjects() {
-        return getSession().createCriteria(ExpenseCategory.class).list();
+     public List getCategoryObjects() {
+        return getSession().createQuery("SELECT ec FROM ExpenseCategory ec", ExpenseCategory.class).list();
     }
 }
