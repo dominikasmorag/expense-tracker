@@ -1,7 +1,7 @@
 package entity;
 
+import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
-import javax.persistence.*;
 
 @Entity
 @Table(name = "expense_category")
@@ -30,5 +30,13 @@ public class ExpenseCategory {
 
     public void setName(String name) {
         this.name = name.toLowerCase();
+    }
+
+    @Override
+    public String toString() {
+        return "ExpenseCategory{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
