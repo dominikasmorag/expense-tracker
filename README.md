@@ -3,7 +3,7 @@
 Simple console app to track expenses, a user can create categories and add expenses to the database.
 Used technologies: **MySQL**, **Hibernate**
 
-Step by step how does it work:
+That's how it works:
 
 1. Creating some categories:
 
