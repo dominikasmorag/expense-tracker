@@ -2,7 +2,7 @@ package entity;
 
 import org.hibernate.annotations.GenericGenerator;
 import payment.PaymentMethod;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
@@ -32,6 +32,26 @@ public class Expense {
 
     @Column(name = "date")
     private LocalDateTime date;
+
+    public Expense(int id, String description, BigDecimal value, ExpenseCategory expenseCategory, PaymentMethod paymentMethod, LocalDateTime date) {
+        this.id = id;
+        this.description = description;
+        this.value = value;
+        this.expenseCategory = expenseCategory;
+        this.paymentMethod = paymentMethod;
+        this.date = date;
+    }
+
+    public Expense(String description, BigDecimal value, ExpenseCategory expenseCategory, PaymentMethod paymentMethod, LocalDateTime date) {
+        this.description = description;
+        this.value = value;
+        this.expenseCategory = expenseCategory;
+        this.paymentMethod = paymentMethod;
+        this.date = date;
+    }
+
+    public Expense() {
+    }
 
     public BigDecimal getValue() {
         return value;
