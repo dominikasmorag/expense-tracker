@@ -68,6 +68,7 @@ public class DataInsert {
     }
 
     private ExpenseCategory askForCategoryId() {
+        expenseCategoryDAO.updateCategoryMap();
         String category = "";
         System.out.println("Categories: " + expenseCategoryDAO.show() + "\nCategory: ");
 
@@ -78,6 +79,7 @@ public class DataInsert {
             }
             else {
                 System.out.println("That category doesn't exist");
+                askForCategoryId();
             }
         }
         return expenseCategoryDAO.categoryHashMap.get(category);
