@@ -30,8 +30,8 @@ public class ExpenseDAO extends DAO {
                 Transaction tx = session.beginTransaction();
                 session.save(expense);
                 tx.commit();
-                return true;
             }
+            return true;
         } catch (Exception ex) {
             ex.printStackTrace();
         }
