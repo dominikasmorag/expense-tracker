@@ -6,7 +6,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import java.util.List;
-import java.util.Scanner;
 
 public class ExpenseDAO extends DAO {
     private final ExpenseCategoryDAO expenseCategoryDAO;
@@ -17,7 +16,6 @@ public class ExpenseDAO extends DAO {
     }
 
     public void addExpenses() {
-        Scanner sc = new Scanner(System.in);
         DataInsert dataInsert = new DataInsert(expenseCategoryDAO);
         List<Expense> list = dataInsert.askForExpense();
         if(insert(list)) {
