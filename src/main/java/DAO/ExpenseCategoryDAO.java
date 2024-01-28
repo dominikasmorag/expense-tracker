@@ -16,6 +16,10 @@ public class ExpenseCategoryDAO extends DAO {
     public ExpenseCategoryDAO(SessionFactory factory)
     {
         super(factory);
+
+    }
+
+    public void updateCategoryMap() {
         categoryHashMap = new HashMap<>();
         List<String> categoryStr = show();
         List<ExpenseCategory> categoryObj = getCategoryObjects();
@@ -73,6 +77,7 @@ public class ExpenseCategoryDAO extends DAO {
                 session.save(category);
             }
             tx.commit();
+            System.out.println("categories saved?");
         } catch (Exception ex) {
             ex.printStackTrace();
         }
